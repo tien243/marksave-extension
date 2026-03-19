@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>MarkSave</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup">
+    <header class="popup-header">
+      <span class="logo">M↓</span>
+      <span class="app-name">MarkSave</span>
+    </header>
+
+    <div class="section">
+      <p class="label">Lưu vào:</p>
+      <div class="active-folder" id="active-folder-display">
+        <span class="folder-icon">📁</span>
+        <span id="active-folder-name">Chưa cấu hình</span>
+      </div>
+    </div>
+
+    <div class="section" id="folder-list-section">
+      <p class="label">Chuyển thư mục:</p>
+      <ul class="folder-list" id="folder-list">
+      </ul>
+    </div>
+
+    <div class="no-folders hidden" id="no-folders-msg">
+      <p>Chưa có thư mục nào.<br/>Mở Cài đặt để thêm thư mục.</p>
+      <button id="add-folder-quick-btn" class="btn-add-folder">⚙ Mở Cài đặt</button>
+    </div>
+
+    <div class="permission-warning hidden" id="permission-warning">
+      <p>⚠️ Cần cấp lại quyền truy cập thư mục.</p>
+      <button id="regrant-btn" class="btn-add-folder">⚙ Mở Cài đặt → Cấp quyền</button>
+    </div>
+
+    <div class="footer">
+      <button id="open-settings-btn" class="btn-settings">⚙ Cài đặt</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
