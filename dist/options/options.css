@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f0f4f4;
+  color: #1a1a1a;
+  padding: 24px 16px;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Header */
+.header {
+  padding: 8px 0 16px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0d7377;
+}
+
+.header .subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Card */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0d7377;
+  border-bottom: 1px solid #e8f0f0;
+  padding-bottom: 10px;
+}
+
+/* Folder table */
+.folder-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.folder-table th {
+  text-align: left;
+  padding: 8px 10px;
+  background: #f5f9f9;
+  color: #555;
+  font-weight: 600;
+  border-bottom: 1px solid #e0eaea;
+}
+
+.folder-table td {
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.folder-table tr:last-child td {
+  border-bottom: none;
+}
+
+.folder-name {
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.active-star {
+  color: #0d7377;
+  font-size: 14px;
+}
+
+.folder-path {
+  color: #888;
+  font-size: 12px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.empty-state {
+  color: #aaa;
+  font-style: italic;
+  text-align: center;
+  padding: 16px;
+}
+
+.action-btns {
+  display: flex;
+  gap: 6px;
+}
+
+/* Buttons */
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s, opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.88;
+}
+
+.btn-primary {
+  background: #0d7377;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #e8f0f0;
+  color: #0d7377;
+}
+
+.btn-danger {
+  background: #fff0f0;
+  color: #c0392b;
+  border: 1px solid #f5c6c6;
+}
+
+.btn-warning {
+  background: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+}
+
+.perm-badge {
+  font-size: 11px;
+  color: #b45309;
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+/* Form elements */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.input {
+  border: 1px solid #d0dcdc;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus {
+  border-color: #0d7377;
+}
+
+.hint {
+  font-size: 12px;
+  color: #888;
+}
+
+code {
+  background: #f0f4f4;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 11px;
+  color: #0d7377;
+}
+
+/* Radio group */
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.radio-label input[type="radio"] {
+  accent-color: #0d7377;
+  width: 15px;
+  height: 15px;
+}
+
+.example {
+  color: #999;
+  font-size: 12px;
+}
+
+/* Checkbox group */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  accent-color: #0d7377;
+  width: 15px;
+  height: 15px;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0 24px;
+}
+
+.save-status {
+  font-size: 13px;
+  color: #0d7377;
+  font-weight: 500;
+}
+
+/* Error message */
+.error-msg {
+  font-size: 12px;
+  color: #c0392b;
+  background: #fff0f0;
+  border: 1px solid #f5c6c6;
+  padding: 6px 10px;
+  border-radius: 5px;
+}
+
+.hidden {
+  display: none;
+}

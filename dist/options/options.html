@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MarkSave — Cài đặt</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>MarkSave</h1>
+      <p class="subtitle">Cài đặt lưu Markdown</p>
+    </header>
+
+    <!-- Folder Management -->
+    <section class="card">
+      <h2>Thư mục lưu</h2>
+      <p class="hint">Thêm thư mục trên máy tính của bạn. Thư mục được chọn sẽ là nơi lưu file mặc định.</p>
+
+      <table class="folder-table" id="folder-table">
+        <thead>
+          <tr>
+            <th>Tên</th>
+            <th>Thư mục</th>
+            <th>Hành động</th>
+          </tr>
+        </thead>
+        <tbody id="folder-tbody">
+          <tr id="no-folders-row">
+            <td colspan="3" class="empty-state">Chưa có thư mục nào. Hãy thêm thư mục bên dưới.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <button id="add-folder-btn" class="btn btn-primary">+ Thêm thư mục</button>
+      <p id="folder-error" class="error-msg hidden"></p>
+    </section>
+
+    <!-- Filename Template -->
+    <section class="card">
+      <h2>Template tên file</h2>
+      <div class="form-group">
+        <input
+          type="text"
+          id="filename-template"
+          class="input"
+          placeholder="{title}-{date}"
+        />
+        <p class="hint">Biến có sẵn: <code>{title}</code> <code>{date}</code> <code>{domain}</code> <code>{time}</code></p>
+      </div>
+    </section>
+
+    <!-- Date Format -->
+    <section class="card">
+      <h2>Định dạng ngày</h2>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="date-format" value="YYYY-MM-DD" />
+          YYYY-MM-DD <span class="example">(2026-03-17)</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="date-format" value="DD-MM-YYYY" />
+          DD-MM-YYYY <span class="example">(17-03-2026)</span>
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="date-format" value="MM-DD-YYYY" />
+          MM-DD-YYYY <span class="example">(03-17-2026)</span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Options -->
+    <section class="card">
+      <h2>Tùy chọn</h2>
+      <div class="checkbox-group">
+        <label class="checkbox-label">
+          <input type="checkbox" id="add-frontmatter" />
+          Thêm YAML frontmatter vào đầu file
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="include-source-url" />
+          Thêm URL nguồn vào frontmatter
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="show-notification" />
+          Hiện thông báo sau khi lưu thành công
+        </label>
+      </div>
+    </section>
+
+    <!-- Save Button -->
+    <div class="actions">
+      <button id="save-btn" class="btn btn-primary">Lưu cài đặt</button>
+      <span id="save-status" class="save-status hidden">✓ Đã lưu</span>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
